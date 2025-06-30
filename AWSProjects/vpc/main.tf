@@ -14,7 +14,7 @@ resource "aws_subnet" "pb_sn" {
   vpc_id            = aws_vpc.mpvpc.id
   cidr_block        = "10.0.1.0/24"
   map_public_ip_on_launch = true
-  availability_zone = "us-east-1a"
+  availability_zone = "eu-west-2a"
     tags = {
         Name = "pb_sn1"
     }
