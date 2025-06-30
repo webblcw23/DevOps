@@ -10,5 +10,5 @@ module "ec2" {
     source = "./web"
 
     sg = module.vpc.sg
-    sn = module.vpc.pb_sn   
+    sn = module.vpc.sn   
 }

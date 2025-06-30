@@ -10,7 +10,7 @@ resource "aws_vpc" "mpvpc" {
   }
 }
 
-resource "aws_subnet" "pb_sn" {
+resource "aws_subnet" "sn" {
   vpc_id            = aws_vpc.mpvpc.id
   cidr_block        = "10.0.1.0/24"
   map_public_ip_on_launch = true
@@ -30,7 +30,7 @@ resource "aws_security_group" "sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = "[0.0.0.0/0]"
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
     egress {
