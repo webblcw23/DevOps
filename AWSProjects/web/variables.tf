@@ -1,9 +1,10 @@
 # This page retrieves the variables from the other modules (vpc) outputs.tf
-
-variable "sg" {
-
+variable "sn" {
+  description = "Subnet ID"
+  type        = string
 }
 
-variable "sn" {
-  
+variable "sg" {
+  description = "Security Group ID"
+  type        = string
 }
